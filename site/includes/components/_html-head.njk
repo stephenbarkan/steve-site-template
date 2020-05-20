@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}} | {{ site.name }}</title>
+  <meta name="description"
+        content="{% if meta_description %}{{ meta_description }}{% else %}{{ excerpt }}{% endif %}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  {% if helpers.environment == "development" %}
+  <link rel="stylesheet" href="/css/main.css">
+  {% else %}
+  {# else, use the minified css file for production #}
+  <link rel="stylesheet" href="/css/main.min.css">
+  {% endif %}
+
+  {% if helpers.environment == "development" %}
+  <script src="/js/main.js" defer></script>
+  {% else %}
+  <script src="/js/main.min.js" defer></script>
+  {% endif %}
+
+  {# include social meta tags #}
+  {% include "components/_social-meta.njk" %}
+
+  {# lastly include favicon, fonts, etc #}
+  <link rel="icon" type="image/png" href="{{ site.images.favicon }}">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+
+</head>
+
+<body class="min-h-screen font-sans antialiased leading-normal text-black text-default">

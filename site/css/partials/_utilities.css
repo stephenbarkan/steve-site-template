@@ -1,0 +1,9 @@
+.grid-absolute {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.grid-inset-0 {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}

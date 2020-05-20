@@ -1,0 +1,11 @@
+@import "tailwindcss/base";
+
+/* @import custom css from the partials folder here */
+@import "/partials/_fonts";
+@import "/partials/_focus";
+/*                                                  */
+
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "partials/_utilities";
