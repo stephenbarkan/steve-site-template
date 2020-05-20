@@ -30,8 +30,8 @@ module.exports = eleventyConfig => {
   eleventyConfig.addLayoutAlias("default", "layouts/default.njk")
 
   // Include our static assets
-  eleventyConfig.addPassthroughCopy("images")
-  eleventyConfig.addPassthroughCopy("webfonts")
+  eleventyConfig.addPassthroughCopy("site/images")
+  eleventyConfig.addPassthroughCopy("site/webfonts")
 
   return {
     templateFormats: ["md", "njk"],
